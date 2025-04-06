@@ -1,5 +1,5 @@
 import React from "react";
-import KeyConceptsImage from "../../assets/images/key-concepts.png";
+import KeyConceptsImage from "../../assets/images/react-core-concepts.png"
 import "./Header.css";
 const Header = () => {
   return (
