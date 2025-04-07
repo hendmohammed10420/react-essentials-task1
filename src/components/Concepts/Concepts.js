@@ -3,11 +3,14 @@ import Concept from "../Concept/Concept";
 import { CORE_CONCEPTS } from "../../data";
 const Concepts = () => {
   return (
-    <ul>
-      {CORE_CONCEPTS.map((conceptItem) => (
-        <Concept key={conceptItem.title} {...conceptItem} />
-      ))}
-    </ul>
+    <>
+      <h2>Core Concepts</h2>
+      <ul>
+        {CORE_CONCEPTS.map((conceptItem) => (
+          <Concept key={conceptItem.title} {...conceptItem} />
+        ))}
+      </ul>
+    </>
   );
 };
 
