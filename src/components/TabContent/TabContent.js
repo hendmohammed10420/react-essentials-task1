@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TabButton from "../TabButton/TabButton";
 import { EXAMPLES } from "../../data";
-
+import Section from "../../Section";
+import Tabs from "./Tabs";
 const TabContent = () => {
   const [selectedTopic, setSelectedTopic] = useState();
 
@@ -12,19 +13,21 @@ const TabContent = () => {
   const topics = ["components", "jsx", "props", "state"];
 
   return (
-    <>
-      <h2>Examples</h2>
-      <menu>
+    <Section title="Examples" id="examples">
+      <Tabs ButtonsContainer="menu"
+            buttons={
+          <>
         {topics.map((topic) => (
           <TabButton
             key={topic}
             isSelected={selectedTopic === topic}
-            onSelect={() => handleSelect(topic)}
+            onClick={() => handleSelect(topic)}
           >
             {EXAMPLES[topic].title}{" "}
           </TabButton>
         ))}
-      </menu>
+      </>
+      }/>
       {!selectedTopic ? (
         <p>Please select a topic</p>
       ) : (
@@ -36,8 +39,8 @@ const TabContent = () => {
           </pre>
         </div>
       )}
-    </>
-  );
+      </Section>
+    );
 };
 
 export default TabContent;
