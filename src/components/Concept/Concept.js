@@ -1,4 +1,3 @@
-import React from "react";
 import "./Concept.css";
 const Concept = (props) => {
   return (

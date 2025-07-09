@@ -6,12 +6,8 @@ function App() {
     <div>
       <Header />
       <main>
-        <section id="core-concepts">
           <Concepts />
-        </section>
-        <section id="examples">
           <TabContent />
-        </section>
       </main>
     </div>
   );
